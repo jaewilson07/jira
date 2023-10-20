@@ -1,0 +1,2 @@
+[nbdev]
+jiralibrary = jiralibrary._modidx:d

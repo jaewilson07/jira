@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "jiralibrary"
+  site-url: "https://jaewilson07.github.io/jira"
+  description: "a library for interacting with jira"
+  repo-branch: main
+  repo-url: "https://github.com/jaewilson07/jira"
