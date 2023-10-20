@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+jiralibrary/__init__.py
+jiralibrary/_modidx.py
+jiralibrary/auth.py
+jiralibrary/client.py
+jiralibrary.egg-info/PKG-INFO
+jiralibrary.egg-info/SOURCES.txt
+jiralibrary.egg-info/dependency_links.txt
+jiralibrary.egg-info/entry_points.txt
+jiralibrary.egg-info/not-zip-safe
+jiralibrary.egg-info/requires.txt
+jiralibrary.egg-info/top_level.txt
