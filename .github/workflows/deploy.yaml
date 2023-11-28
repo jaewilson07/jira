@@ -8,7 +8,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      JIRA_INSTANCE: ${{ secrets.JIRA_INSANCE }}
+      JIRA_INSTANCE: ${{ secrets.JIRA_INSTANCE }}
       JIRA_PAT: ${{ secrets.JIRA_PAT }}  
     steps: 
       - uses: actions/checkout@v4
