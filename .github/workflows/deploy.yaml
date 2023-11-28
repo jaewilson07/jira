@@ -1,20 +1,15 @@
 name: Deploy to GitHub Pages
-
-permissions:
-  contents: write
-  pages: write
-
 on:
   push:
     branches: [ "main", "master" ]
   workflow_dispatch:
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
       JIRA_INSTANCE: ${{ secrets.JIRA_INSANCE }}
-      JIRA_PAT: ${{ secrets.JIRA_PAT }}
-      
+      JIRA_PAT: ${{ secrets.JIRA_PAT }}  
     steps: 
       - uses: actions/checkout@v4
       - uses: fastai/workflows/quarto-ghp@master

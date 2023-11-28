@@ -21,13 +21,6 @@ class _JiraAuth_Required:
 class _JiraAuth_Optional:
     base_url: str = None
 
-    def __post_init__(self):
-        if not self.instance.startswith("https://"):
-            instance = f"https://{self.instance}"
-
-        self.instance = parse.urlparse(instance).netloc
-        self.base_url = instance
-
 # %% ../nbs/auth.ipynb 5
 @dataclass
 class JiraAuth(_JiraAuth_Optional, _JiraAuth_Required):
@@ -42,6 +35,13 @@ class _JiraAuthPat_Required:
 # %% ../nbs/auth.ipynb 8
 @dataclass
 class JiraAuthPat(_JiraAuth_Optional, _JiraAuthPat_Required, _JiraAuth_Required):
+    def __post_init__(self):
+        if not self.instance.startswith("https://"):
+            instance = f"https://{self.instance}"
+
+        self.instance = parse.urlparse(instance).netloc
+        self.base_url = instance
+
     def generate_auth_header(self):
         auth_str = base64.b64encode(f"{self.email}:{self.pat}".encode("ascii")).decode(
             "ascii"
