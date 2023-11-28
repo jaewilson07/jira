@@ -2,5 +2,6 @@ fastcore
 pandas
 nbdev
 httpx
+black
 
 [dev]

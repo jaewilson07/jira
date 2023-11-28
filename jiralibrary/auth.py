@@ -24,7 +24,6 @@ class _JiraAuth_Optional:
 # %% ../nbs/auth.ipynb 5
 @dataclass
 class JiraAuth(_JiraAuth_Optional, _JiraAuth_Required):
-    
     pass
 
 # %% ../nbs/auth.ipynb 7
@@ -42,7 +41,7 @@ class JiraAuthPat(_JiraAuth_Optional, _JiraAuthPat_Required, _JiraAuth_Required)
 
         self.instance = parse.urlparse(instance).netloc
         self.base_url = instance
-        
+
     def generate_auth_header(self):
         auth_str = base64.b64encode(f"{self.email}:{self.pat}".encode("ascii")).decode(
             "ascii"

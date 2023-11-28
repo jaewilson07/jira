@@ -58,10 +58,12 @@ async def get_data(
     if debug_api:
         pprint({"url": url, "headers": headers, "params": params, "body": body})
 
-    if method == 'get':
-        res = await getattr(session, method)( url=url, headers=headers, params=params )
-    else: 
-        res = await getattr(session, method)( url=url, headers=headers, params=params, data=body)
+    if method == "get":
+        res = await getattr(session, method)(url=url, headers=headers, params=params)
+    else:
+        res = await getattr(session, method)(
+            url=url, headers=headers, params=params, data=body
+        )
 
     if is_close_session:
         await session.aclose()
