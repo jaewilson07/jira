@@ -1,6 +1,0 @@
-website:
-  sidebar:
-    contents:
-      - index.ipynb
-      - auth.ipynb
-      - client.ipynb
