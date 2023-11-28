@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "client.html",
+    "href": "client.html",
+    "title": "client",
+    "section": "",
+    "text": "source\n\nResponseGetData\n\n ResponseGetData (status:int, response:str, auth:any=None,\n                  is_success:bool=False)\n\nclass for returning data from any jiralibrary route\n\nResponseGetData(status=200, response=\"hello world\")\n\nResponseGetData(status=200, response='hello world', is_success=True)\n\n\n\nsource\n\n\nget_data\n\n get_data (url:str, method:str, auth:&lt;built-infunctionany&gt;,\n           headers:dict=None, params:dict=None, debug_api:bool=False,\n           body=None, session:httpx.AsyncClient=None)\n\nwrapper for httpx Request library, always use with jiralibrary class"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "jiralibrary",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "jiralibrary",
+    "section": "Install",
+    "text": "Install\npip install jiralibrary"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "jiralibrary",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2"
+  },
+  {
+    "objectID": "auth.html",
+    "href": "auth.html",
+    "title": "auth",
+    "section": "",
+    "text": "source\n\nJiraAuth\n\n JiraAuth (instance:str, base_url:str=None)\n\n\nimport os\n\njira_instance = os.environ[\"JIRA_INSTANCE\"]\n\nJiraAuth(instance=jira_instance)\n\nJiraAuth(instance='onyxreporting.atlassian.net', base_url=None)\n\n\n\nsource\n\n\nJiraAuthPat\n\n JiraAuthPat (instance:str, email:str, pat:str, base_url:str=None)\n\n\nimport os\n\njira_pat = os.environ[\"JIRA_PAT\"]\njira_instance = os.environ[\"JIRA_INSTANCE\"]\n\njira_auth = JiraAuthPat(\n    pat=jira_pat, email=\"jae@onyxreporting.com\", instance=jira_instance\n)\n\nres = await jira_auth.who_am_i(debug_api=False)\n\nres.response\n\njira_auth\n\nJiraAuthPat(instance='onyxreporting.atlassian.net', email='jae@onyxreporting.com', base_url='https://onyxreporting.atlassian.net')"
+  }
+]
