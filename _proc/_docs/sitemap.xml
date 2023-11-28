@@ -1,3 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://jaewilson07.github.io/jira/client.html</loc>
+    <lastmod>2023-11-28T01:26:34.888Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jaewilson07.github.io/jira/index.html</loc>
+    <lastmod>2023-11-28T01:26:32.900Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jaewilson07.github.io/jira/auth.html</loc>
+    <lastmod>2023-11-28T01:26:34.288Z</lastmod>
+  </url>
 </urlset>

@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "client.html",
+    "href": "client.html",
+    "title": "client",
+    "section": "",
+    "text": "source\n\nResponseGetData\n\n ResponseGetData (status:int, response:str, auth:&lt;built-\n                  infunctionany&gt;=None, is_success:bool=False)\n\nclass for returning data from any jiralibrary route\n\nResponseGetData(status=200, response=\"hello world\")\n\nResponseGetData(status=200, response='hello world', is_success=True)\n\n\n\nsource\n\n\nget_data\n\n get_data (url:str, method:str, auth:&lt;built-infunctionany&gt;,\n           headers:dict=None, params:dict=None, debug_api:bool=False,\n           body=None, session:httpx.AsyncClient=None)\n\nwrapper for httpx Request library, always use with jiralibrary class"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "jiralibrary",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "jiralibrary",
+    "section": "Install",
+    "text": "Install\npip install jiralibrary"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "jiralibrary",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2"
+  },
+  {
+    "objectID": "auth.html",
+    "href": "auth.html",
+    "title": "auth",
+    "section": "",
+    "text": "source\n\nJiraAuth\n\n JiraAuth (instance:str, base_url:str=None)\n\n\nimport os\n\njira_instance = os.environ[\"JIRA_INSTANCE\"]\n\nJiraAuth(instance=jira_instance)\n\nJiraAuth(instance='onyxreporting.atlassian.net', base_url='https://onyxreporting.atlassian.net')\n\n\n\nsource\n\n\nJiraAuthPat\n\n JiraAuthPat (instance:str, email:str, pat:str, base_url:str=None)\n\n\nimport os\n\njira_pat = os.environ[\"JIRA_PAT\"]\njira_instance = os.environ[\"JIRA_INSTANCE\"]\n\njira_auth = JiraAuthPat(\n    pat=jira_pat, email=\"jae@onyxreporting.com\", instance=jira_instance\n)\n\nres = await jira_auth.who_am_i(debug_api=False)\n\nres.response\n\n{'self': 'https://onyxreporting.atlassian.net/rest/api/2/user?accountId=70121:233b7627-506e-41d8-af0c-336541c67dab',\n 'accountId': '70121:233b7627-506e-41d8-af0c-336541c67dab',\n 'accountType': 'atlassian',\n 'emailAddress': 'jae@onyxreporting.com',\n 'avatarUrls': {'48x48': 'https://secure.gravatar.com/avatar/2314f91c29ace4d7d9426d26448391f4?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJW-0.png',\n  '24x24': 'https://secure.gravatar.com/avatar/2314f91c29ace4d7d9426d26448391f4?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJW-0.png',\n  '16x16': 'https://secure.gravatar.com/avatar/2314f91c29ace4d7d9426d26448391f4?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJW-0.png',\n  '32x32': 'https://secure.gravatar.com/avatar/2314f91c29ace4d7d9426d26448391f4?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FJW-0.png'},\n 'displayName': 'Jae Wilson',\n 'active': True,\n 'timeZone': 'Europe/London',\n 'locale': 'en_US',\n 'groups': {'size': 1, 'items': []},\n 'applicationRoles': {'size': 1, 'items': []},\n 'expand': 'groups,applicationRoles'}"
+  }
+]
